@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de tareas</title>
+  <meta name="description" content="Una lista de tareas sencilla hecha con HTML, CSS y JavaScript.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Lista de tareas</h1>
+    </header>
+
+    <form id="form-tarea" class="form-tarea" autocomplete="off">
+      <label for="nueva-tarea" class="sr-only">Nueva tarea</label>
+      <input id="nueva-tarea" type="text" placeholder="¿Qué tienes que hacer?" maxlength="200" required>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <nav class="filtros" aria-label="Filtrar tareas">
+      <button type="button" data-filtro="todas" class="activo" aria-pressed="true">Todas</button>
+      <button type="button" data-filtro="pendientes" aria-pressed="false">Pendientes</button>
+      <button type="button" data-filtro="completadas" aria-pressed="false">Completadas</button>
+    </nav>
+
+    <ul id="lista" class="lista"></ul>
+    <p id="vacio" class="vacio" hidden>No hay tareas aquí.</p>
+
+    <footer class="pie">
+      <span id="contador">0 pendientes</span>
+      <button type="button" id="borrar-completadas" class="enlace">Borrar completadas</button>
+    </footer>
+
+    <p class="ayuda">Doble clic en una tarea para editarla.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

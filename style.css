@@ -1,0 +1,139 @@
+body {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Formulario */
+.form-tarea {
+  display: flex;
+  gap: 8px;
+}
+
+.form-tarea input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-tarea button {
+  padding: 8px 14px;
+  border: 1px solid #222;
+  background: #222;
+  color: #fff;
+}
+
+/* Filtros */
+.filtros {
+  margin: 16px 0 8px;
+}
+
+.filtros button {
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.filtros button.activo {
+  border-color: #222;
+  font-weight: bold;
+}
+
+/* Lista */
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tarea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.tarea .texto {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.tarea.hecha .texto {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.tarea .editar {
+  flex: 1;
+  min-width: 0;
+  padding: 4px;
+}
+
+.tarea .eliminar {
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.tarea .eliminar:hover {
+  color: #c00;
+}
+
+.vacio {
+  color: #999;
+  text-align: center;
+}
+
+/* Pie */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.enlace {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #666;
+  text-decoration: underline;
+}
+
+.enlace:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.ayuda {
+  font-size: 0.8rem;
+  color: #999;
+}
