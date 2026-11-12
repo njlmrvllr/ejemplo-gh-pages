@@ -20,6 +20,7 @@ Una lista de tareas sencilla hecha con HTML, CSS y JavaScript, sin librerías. L
 | `index.html` | Estructura de la página            |
 | `style.css`  | Estilos                            |
 | `script.js`  | Lógica de la lista y del guardado  |
+| `.github/workflows/deploy.yml` | Despliegue automático con GitHub Actions |
 
 ## Verla en local
 
@@ -27,7 +28,9 @@ Abre `index.html` en el navegador. No hace falta instalar nada.
 
 ## Publicarla con GitHub Pages
 
-1. Sube el repositorio a GitHub.
-2. Ve a **Settings → Pages**.
-3. En **Source** elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`, y pulsa **Save**.
-4. Al cabo de un minuto la página estará en `https://<usuario>.github.io/lista-tareas/`.
+El despliegue lo hace GitHub Actions con el workflow `.github/workflows/deploy.yml`.
+
+1. Crea el repositorio en GitHub.
+2. Ve a **Settings → Pages** y en **Source** elige **GitHub Actions**.
+3. Sube el código a la rama `main`. Cada push a `main` vuelve a publicar la página.
+4. Puedes ver el progreso en la pestaña **Actions**. Cuando termine, la página estará en `https://<usuario>.github.io/lista-tareas/`.
